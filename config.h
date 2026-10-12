@@ -28,8 +28,8 @@ static const Rule rules[] = {
      */
 
     /*
-     * 0 - use current tag
-     * 1 - make window floating
+     *  0 - use current tag
+     *  1 - make window floating
      * -1 - current monitor
      */
 
