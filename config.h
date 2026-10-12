@@ -26,13 +26,14 @@ static const Rule rules[] = {
      *	WM_CLASS(STRING) = instance, class
      *	WM_NAME(STRING) = title
      */
+
     /*
      * 0 - use current tag
      * 1 - make window floating
      * -1 - current monitor
      */
-    /* class               instance    title       tags mask     isfloating
-    monitor */
+
+    /* class      instance    title       tags mask     isfloating   monitor */
     {"Gimp", NULL, NULL, 0, 1, -1},
     {"Firefox", NULL, NULL, 1 << 8, 0, -1},
     {"Chromium-browser"},
