@@ -32,8 +32,9 @@ static const Rule rules[] = {
      * -1 - current monitor
      */
 
-    /* class      instance      title      tags mask      isfloating      monitor */
-    {"mpv", NULL, NULL, 0, 1, -1},
+    /* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
+    {"kitty", NULL, NULL, 0, 0, 1, 0, -1},
+    {"mpv", NULL, NULL, 0, 1, 0, 0, -1},
 };
 
 /* layout(s) */
