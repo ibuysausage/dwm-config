@@ -1,3 +1,5 @@
+#include <X11/XF86keysym.h>
+
 /* See LICENSE file for copyright and license details. */
 /* appearance */
 static const unsigned int borderpx = 1; /* border pixel of windows */
@@ -12,10 +14,14 @@ static const char col_gray2[] = "#444444";
 static const char col_gray3[] = "#bbbbbb";
 static const char col_gray4[] = "#eeeeee";
 static const char col_cyan[] = "#005577";
+static const char bg[] = "#1e1e2e";
+static const char fg[] = "#b4befe";
+static const char border[] = "#9399b2";
+static const char text[] = "#11111b";
 static const char *colors[][3] = {
     /*               fg         bg         border   */
-    [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
-    [SchemeSel] = {col_gray4, col_cyan, col_cyan},
+    [SchemeNorm] = {fg, bg, border},
+    [SchemeSel] = {text, fg, fg},
 };
 
 /* tagging */
@@ -96,6 +102,20 @@ static const Key keys[] = {
     {MODKEY, XK_period, focusmon, {.i = +1}},
     {MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
     {MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
+    /* Audio and media keys */
+    {0, XF86XK_AudioMute, spawn, SHCMD("pactl set-sink-mute @DEFAULT_SINK@ toggle")},
+    {0, XF86XK_AudioMicMute, spawn, SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle")},
+    {0, XF86XK_AudioPlay, spawn, SHCMD("playerctl play-pause")},
+    {0, XF86XK_AudioPause, spawn, SHCMD("playerctl play-pause")},
+    {0, XF86XK_AudioNext, spawn, SHCMD("playerctl next")},
+    {0, XF86XK_AudioPrev, spawn, SHCMD("playerctl previous")},
+    {0, XF86XK_AudioStop, spawn, SHCMD("playerctl stop")},
+    {0, XF86XK_AudioLowerVolume, spawn, SHCMD("~/.config/sway/volume.sh down")},
+    {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("~/.config/sway/volume.sh up")},
+
+    /* Screen brightness keys */
+    {0, XF86XK_MonBrightnessDown, spawn, SHCMD("~/.config/sway/brightness.sh down")},
+    {0, XF86XK_MonBrightnessUp, spawn, SHCMD("~/.config/sway/brightness.sh up")},
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
         TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
             TAGKEYS(XK_9, 8){MODKEY | ShiftMask, XK_q, quit, {0}},
