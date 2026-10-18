@@ -39,9 +39,20 @@ static const Rule rules[] = {
      * -1 - current monitor
      */
 
+    /* swallow example
+     *{"kitty",    NULL,     NULL,            0,         0,          1,          0,         -1},
+     *{"mpv",      NULL,     NULL,            0,         0,          0,          1,         -1},
+     *{NULL,       NULL,     "Event Tester",  0,         0,          0,          1,         -1},
+     *
+     *Kitty: isterminal = 1 lets it swallow descendant windows.
+     *mpv: noswallow = 1 prevents it from being swallowed into Kitty.
+     *xev: noswallow = 1 prevents it from being swallowed into Kitty.
+     */
+
     /* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-    {"kitty", NULL, NULL, 0, 0, 1, 1, -1},
+    {"kitty", NULL, NULL, 0, 0, 1, 0, -1},
     {"mpv", NULL, NULL, 0, 1, 0, 0, -1},
+    {NULL, NULL, "Event Tester", 0, 0, 0, 1, -1}, /* xev */
 };
 
 /* layout(s) */
