@@ -40,7 +40,7 @@ static const Rule rules[] = {
      */
 
     /* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-    {"kitty", NULL, NULL, 0, 0, 1, 0, -1},
+    {"kitty", NULL, NULL, 0, 0, 1, 1, -1},
     {"mpv", NULL, NULL, 0, 1, 0, 0, -1},
 };
 
