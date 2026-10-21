@@ -7,8 +7,7 @@ static const unsigned int snap = 32;    /* snap pixel */
 static const int swallowfloating = 0;   /* 1 means swallow floating windows by default */
 static const int showbar = 1;           /* 0 means no bar */
 static const int topbar = 1;            /* 0 means bottom bar */
-// // static const char *fonts[] = {"Iosevka Nerd Font:size=12"};
-static const char *fonts[] = {"CaskaydiaCove Nerd Font:size=12"};
+static const char *fonts[] = {"Iosevka Nerd Font Propo:size=12"};
 static const char dmenufont[] = "Iosevka Nerd Font:size=12";
 static const char col_gray1[] = "#222222";
 static const char col_gray2[] = "#444444";
@@ -63,8 +62,8 @@ static const Rule rules[] = {
     {"Emacs", NULL, NULL, 1 << 0, 0, 0, 0, -1, ""},
     {"mpv", NULL, NULL, 1 << 3, 1, 0, 0, -1, ""},
     {"Chromium-browser", NULL, NULL, 1 << 2, 0, 0, 0, -1, ""},
-    {"jetbrains-studio", NULL, NULL, 0, 1, 0, 0, -1, ""},
-    {"Emulator", NULL, NULL, 0, 1, 0, 0, -1, NULL},
+    {"jetbrains-studio", NULL, NULL, 1 << 3, 1, 0, 0, -1, "󰀴"},
+    {"Emulator", NULL, NULL, 1 << 3, 1, 0, 0, -1, NULL},
     {NULL, NULL, "Event Tester", 0, 0, 0, 1, -1}, /* xev */
 };
 
