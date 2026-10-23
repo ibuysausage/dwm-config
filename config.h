@@ -63,8 +63,8 @@ static const Rule rules[] = {
     {"mpv", NULL, NULL, 1 << 3, 1, 0, 0, -1, ""},
     {"Chromium-browser", NULL, NULL, 1 << 2, 0, 0, 0, -1, ""},
     {"librewolf", NULL, NULL, 1 << 2, 0, 0, 0, -1, "󰈹"},
-    {"jetbrains-studio", NULL, NULL, 1 << 3, 0, 0, 0, -1, "󰀴"},
-    {"Emulator", NULL, NULL, 1 << 3, 1, 0, 0, -1, NULL},
+    {"jetbrains-studio", NULL, "splash", 1 << 3, 0, 0, 0, -1, "󰀴"},
+    {"Emulator", NULL, NULL, 0, 1, 0, 1, -1, NULL},
     {NULL, NULL, "Event Tester", 0, 0, 0, 1, -1}, /* xev */
 };
 
