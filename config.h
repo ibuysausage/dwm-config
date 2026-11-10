@@ -61,6 +61,7 @@ static const Rule rules[] = {
     {"st", NULL, NULL, 1 << 1, 0, 1, 0, -1, ""},
     {"Emacs", NULL, NULL, 1 << 0, 0, 0, 0, -1, ""},
     {"mpv", NULL, NULL, 1 << 3, 1, 0, 0, -1, ""},
+    {"dolphin", NULL, NULL, 0, 1, 0, 0, -1, "󰝰"},
     {"Chromium-browser", NULL, NULL, 1 << 2, 0, 0, 0, -1, ""},
     {"Surf", NULL, NULL, 1 << 2, 0, 0, 0, -1, ""},
     {"librewolf", NULL, NULL, 1 << 2, 0, 0, 0, -1, "󰈹"},
