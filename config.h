@@ -129,15 +129,15 @@ static const Key keys[] = {
     {MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
     {MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
     /* Audio and media keys */
-    {0, XF86XK_AudioMute, spawn, SHCMD("~/.config/dwm/volume.sh mute")},
-    {0, XF86XK_AudioMicMute, spawn, SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle")},
+    {0, XF86XK_AudioMute, spawn, SHCMD("wpctl set-mute @DEFAULT_SINK@ toggle")},
+    {0, XF86XK_AudioMicMute, spawn, SHCMD("wpctl set-mute @DEFAULT_SOURCE@ toggle")},
     {0, XF86XK_AudioPlay, spawn, SHCMD("playerctl play-pause")},
     {0, XF86XK_AudioPause, spawn, SHCMD("playerctl play-pause")},
     {0, XF86XK_AudioNext, spawn, SHCMD("playerctl next")},
     {0, XF86XK_AudioPrev, spawn, SHCMD("playerctl previous")},
     {0, XF86XK_AudioStop, spawn, SHCMD("playerctl stop")},
-    {0, XF86XK_AudioLowerVolume, spawn, SHCMD("~/.config/dwm/volume.sh down")},
-    {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("~/.config/dwm/volume.sh up")},
+    {0, XF86XK_AudioLowerVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")},
+    {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+")},
 
     /* Screen brightness keys */
     {0, XF86XK_MonBrightnessDown, spawn, SHCMD("~/.config/dwm/brightness.sh down")},
