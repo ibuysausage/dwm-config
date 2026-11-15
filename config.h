@@ -67,6 +67,7 @@ static const Rule rules[] = {
     {"librewolf", NULL, NULL, 1 << 2, 0, 0, 0, -1, "󰈹"},
     {"jetbrains-studio", NULL, NULL, 0, 1, 0, 0, -1, "󰀴"},
     {"Emulator", NULL, NULL, 0, 1, 0, 1, -1, NULL},
+    {"jellyfin-desktop", NULL, NULL, 1 << 3, 0, 0, 0, -1, "󰼁"},
     {NULL, NULL, "Event Tester", 0, 0, 0, 1, -1}, /* xev */
 };
 
@@ -136,8 +137,8 @@ static const Key keys[] = {
     {0, XF86XK_AudioNext, spawn, SHCMD("playerctl next")},
     {0, XF86XK_AudioPrev, spawn, SHCMD("playerctl previous")},
     {0, XF86XK_AudioStop, spawn, SHCMD("playerctl stop")},
-    {0, XF86XK_AudioLowerVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")},
-    {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+")},
+    {0, XF86XK_AudioLowerVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_SINK@ 5%-")},
+    {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("wpctl set-volume @DEFAULT_SINK@ 5%+")},
 
     /* Screen brightness keys */
     {0, XF86XK_MonBrightnessDown, spawn, SHCMD("~/.config/dwm/brightness.sh down")},
