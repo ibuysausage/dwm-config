@@ -103,6 +103,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"dmenu_run", "-m", dmenumon, "-c", "-fn", dmenufont, NULL};
 static const char *termcmd[] = {"st", NULL};
+static const char *flameshotcmd[] = {"flameshot", "gui", NULL};
 
 static const Key keys[] = {
     /* modifier                     key        function        argument */
@@ -129,6 +130,7 @@ static const Key keys[] = {
     {MODKEY, XK_period, focusmon, {.i = +1}},
     {MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
     {MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
+
     /* Audio and media keys */
     {0, XF86XK_AudioMute, spawn, SHCMD("wpctl set-mute @DEFAULT_SINK@ toggle")},
     {0, XF86XK_AudioMicMute, spawn, SHCMD("wpctl set-mute @DEFAULT_SOURCE@ toggle")},
@@ -143,6 +145,9 @@ static const Key keys[] = {
     /* Screen brightness keys */
     {0, XF86XK_MonBrightnessDown, spawn, SHCMD("~/.config/dwm/brightness.sh down")},
     {0, XF86XK_MonBrightnessUp, spawn, SHCMD("~/.config/dwm/brightness.sh up")},
+
+    /* Other keys */
+    {MODKEY, XK_p, spawn, {.v = flameshotcmd}},
 
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
         TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
