@@ -59,8 +59,8 @@ static const Rule rules[] = {
 
     /* class   instance   title   tags mask   isfloating   isterminal   noswallow   monitor   appicons*/
     /* need st-256color-plain because of my st-plain wrapper for no tmux */
-    {"st", NULL, NULL, 1 << 1, 0, 1, 0, -1, ""},
-    {"st-256color-plain", NULL, NULL, 0, 1, 0, 0, -1, NULL},
+    {"st-256color", NULL, NULL, 1 << 1, 0, 1, 0, -1, ""},
+    {"st-plain", NULL, NULL, 0, 1, 0, 0, -1, NULL},
     {"Emacs", NULL, NULL, 1 << 0, 0, 0, 0, -1, ""},
     {"mpv", NULL, NULL, 1 << 3, 1, 0, 0, -1, ""},
     {"dolphin", NULL, NULL, 0, 1, 0, 0, -1, "󰝰"},
